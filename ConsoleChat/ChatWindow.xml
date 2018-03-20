@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<my:Window Name="GridWindow" Title="Очень длинное название окна"
+        xmlns:x="http://consoleframework.org/xaml.xsd"
+        xmlns:my="clr-namespace:ConsoleFramework.Controls;assembly=ConsoleFramework"
+        xmlns:converters="clr-namespace:Binding.Converters;assembly=Binding"
+        xmlns:xaml="clr-namespace:ConsoleFramework.Xaml;assembly=ConsoleFramework"
+        MinWidth="120" MinHeight="30"   >
+  <Grid Name="chatGrid">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*"></ColumnDefinition>
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*"/>
+      <RowDefinition/>
+    </Grid.RowDefinitions>
+    <TextBlock Name="chatArea" Text="Text" Height="29" Width="118"></TextBlock>
+    <TextBox HorizontalAlignment="Stretch" Width="118" Text="{Binding Path=Str}" Name="chatInput"></TextBox>
+  </Grid>
+</my:Window>
